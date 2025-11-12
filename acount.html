@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/acount.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="icon" href="img/asosiylogo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="./index.html"><img src="img/Logo.svg" alt="Logo"></a>
+                </div>
+                <div class="dropdown">
+                    <a class="btn border-0 bg-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Search for course">
+                    <a href="./search.html"><button><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                </div>
+                <div class="become">
+                    <a href="">Become Instructor</a>
+                </div>
+                
+                <div class="header-left">
+                    <div class="cart-icon">
+                        <a href="./search.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    
+                    <div class="mobilni">
+                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Hide this modal and show the first with the button below.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn1 btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><i class="fa-regular fa-bell"></i></button>
+                    </div>
+                    
+                    <div class="dropdown">
+  <button class="btn2 btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   <img src="./img/avatar.svg" alt="">
+  </button>
+  <ul class=" dropdown-menu">
+    <li><a class="login-2 dropdown-item" href="./acount.html">Jonathan Doe <br> <span>doe.jonathan@email.com</span></a></li>
+    <hr>
+    <li><a class="dropdown-item" href="#">My Courses</a></li>
+    <li><a class="dropdown-item" href="./search.html">My Cart</a></li>
+    <li><a class="dropdown-item" href="#">Wishlist</a></li>
+    <hr>
+    <li><a class="dropdown-item" href="#">Notifications</a></li>
+    <li><a class="dropdown-item" href="#">Account Settings</a></li>
+    <hr>
+    <li><a class="dropdown-item" href="index.html" style="color: red;">Logout</a></li>
+  </ul>
+</di
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered custom-modal modal-lg">
+            <div class="modal-content modern-modal">
+                <button type="button" class="btn-close modern-close" data-bs-dismiss="modal"></button>
+                
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <img src="./img/dekarativ.png" alt="Decorative" class="decorative-img">
+                        <div class="artist-info">
+                            <img src="./img/Thumbnail.svg" alt="Jane" class="artist-avatar">
+                            <div>
+                                <h4>Jane Kitani</h4>
+                                <p>Graphic Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-right">
+                        <div class="modal-logo">
+                            <img src="./img/Logo.svg" alt="Logo">
+                        </div>
+                        
+                        <p class="modal-subtitle">Join us and get more benefits. We promise to keep your data safely.</p>
+                        
+                        <div class="form-inputs">
+                            <div class="input-wrapper">
+                                <input type="email" placeholder="Email Address">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            
+                            <div class="input-wrapper">
+                                <input type="password" placeholder="Password">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-login">Login</button>
+                        
+                        <p class="divider-text">or you can</p>
+                        
+                        <button class="social-btn facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            Continue with Facebook
+                        </button>
+                        
+                        <button class="social-btn apple-btn">
+                            <i class="fa-brands fa-apple"></i>
+                            Continue with Apple
+                        </button>
+                        
+                        <button class="social-btn google-btn">
+                            <img src="./img/gogle.svg" alt="">
+                            Continue with Google
+                        </button>
+                        
+                        <p class="signup-link">Need an Account? <a href="#">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="container">
+        <h1>My Account</h1>
+        
+        <div class="tabs">
+            <div class="tab active">Profile</div>
+            <div class="tab">Personalisation</div>
+            <div class="tab">Account</div>
+            <div class="tab">Payment Methods</div>
+            <div class="tab">Notifications</div>
+            <div class="tab">Privacy</div>
+        </div>
+
+        <div class="profile-section">
+            <div class="avatar-container">
+                <div class="avatar"><img src="./img/Square.svg" alt=""></div>
+                <div class="edit-icon"></div>
+            </div>
+
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" id="firstName" value="Jonathan">
+            </div>
+
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" id="lastName" value="Doe">
+            </div>
+
+            <div class="form-group">
+                <label>Headline</label>
+                <input type="text" id="headline" placeholder="Add a headline">
+            </div>
+
+            <div class="form-group">
+                <label>Language</label>
+                <select id="language">
+                    <option value="en" selected>English</option>
+                    <option value="uz">O'zbek</option>
+                    <option value="ru">Русский</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Link</label>
+                <input type="text" id="link" placeholder="www.kitani.io">
+            </div>
+
+            <button class="save-btn" onclick="saveProfile()">Save</button>
+        </div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+        Profile saved successfully! ✓
+    </div>
+
+
+
+    <!--footer -->
+    <footer>
+  <div class="container">
+    <div class="footer-ota">
+      <div><img src="./img/logo2.svg" alt=""></div>
+      <div class="footer-left">
+      <div class="hover-mian">
+        <a class="hover-link" href="./index.html">Web Programming</a>
+        <a class="hover-link" href="./index.html">Mobile Programming</a>
+        <a class="hover-link" href="./index.html">Java Beginner</a>
+        <a class="hover-link" href="./index.html">PHP Beginner</a>
+      </div>
+      <div class="hover-mian">
+        <a class="hover-link" href="./index.html">Adobe Illustrator</a>
+        <a class="hover-link" href="./index.html">MPhotoshop</a>
+        <a class="hover-link" href="./index.html">Design Logo</a>
+      </div>
+      <div class="hover-mian">
+        <a class="hover-link" href="./index.html">Writing Course</a>
+        <a class="hover-link" href="./index.html">Photography</a>
+        <a class="hover-link" href="./index.html">Video Making</a>
+      </div>
+      </div>
+    </div>
+    <div class="hr-flex"></div>
+    <div class="reseved">
+      <a href="./index.html">Copyright © MyCourse.io 2024. All Rights Reserved</a>
+      <div class="img-3">
+        <a href=""><img src="./img/tiwiter.svg" alt=""></a>
+        <a href=""><img src="./img/instagram.svg" alt=""></a>
+        <a href=""><img src="./img/Facebook.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="icon" href="img/asosiylogo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+     <header class="header-2">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="index.html"><img src="img/Logo.svg" alt="Logo"></a>
+                </div>
+                <div class="dropdown">
+                <a class="btn border-0 bg-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+
+               <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+               </ul>
+            </div>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Search for course">
+                    <a href="./index.html"><button><i class="fa-solid fa-xmark"></i></button></a>
+                </div>
+                <div class="become">
+                    <a href="">Become Instructor</a>
+                </div>
+                
+                   <div class="header-left">
+                    <div class="cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                   <div class="mobilni">
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Hide this modal and show the first with the button below.
+      </div>
+      <div class="modal-footer">
+         <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">
+          Back to first
+           </button>
+            </div>
+             </div>
+                </div>
+                  </div>
+                    <button class="btn1 btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"> <i class="fa-regular fa-bell"></i></button>
+                    </div>
+                    <div class="dropdown">
+  <button class="btn2 btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   <img src="./img/avatar.svg" alt="">
+  </button>
+  <ul class=" dropdown-menu">
+    <li><a class="login-2 dropdown-item" href="./acount.html">Jonathan Doe <br> <span>doe.jonathan@email.com</span></a></li>
+    <hr>
+    <li><a class="dropdown-item" href="#">My Courses</a></li>
+    <li><a class="dropdown-item" href="./search.html">My Cart</a></li>
+    <li><a class="dropdown-item" href="#">Wishlist</a></li>
+    <hr>
+    <li><a class="dropdown-item" href="#">Notifications</a></li>
+    <li><a class="dropdown-item" href="#">Account Settings</a></li>
+    <hr>
+    <li><a class="dropdown-item" href="index.html" style="color: red;">Logout</a></li>
+  </ul>
+</div>
+
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered custom-modal modal-lg">
+            <div class="modal-content modern-modal">
+                <button type="button" class="btn-close modern-close" data-bs-dismiss="modal"></button>
+                
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <img src="./img/dekarativ.png" alt="Decorative" class="decorative-img">
+                        <div class="artist-info">
+                            <img src="./img/Thumbnail.svg" alt="Jane" class="artist-avatar">
+                            <div>
+                                <h4>Jane Kitani</h4>
+                                <p>Graphic Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-right">
+                        <div class="modal-logo">
+                            <img src="./img/Logo.svg" alt="Logo">
+                        </div>
+                        
+                        <p class="modal-subtitle">Join us and get more benefits. We promise to keep your data safely.</p>
+                        
+                        <div class="form-inputs">
+                            <div class="input-wrapper">
+                                <input type="email" placeholder="Email Address">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            
+                            <div class="input-wrapper">
+                                <input type="password" placeholder="Password">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-login">Login</button>
+                        
+                        <p class="divider-text">or you can</p>
+                        
+                        <button class="social-btn facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            Continue with Facebook
+                        </button>
+                        
+                        <button class="social-btn apple-btn">
+                            <i class="fa-brands fa-apple"></i>
+                            Continue with Apple
+                        </button>
+                        
+                        <button class="social-btn google-btn">
+                            <img src="./img/gogle.svg" alt="">
+                            Continue with Google
+                        </button>
+                        
+                        <p class="signup-link">Need an Account? <a href="#">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+     
+       <div class="container">
+      <div class="search-container">
+        <div class="filter">
+          <div class="rilter_title">
+            <h1>Filter</h1>
+            <a href="./search.html">Clear</a>
+          </div>
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  Rating
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show"
+              >
+                <div class="accordion-body">
+                  <div class="starts">
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <span><img src="/svg/star.svg" alt="" /></span>
+                      <p>4.5 & up (5.8K)</p>
+                    </label>
+
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <span><img src="/svg/star.svg" alt="" /></span>
+                      <p>4.0 & up (4.1K)</p>
+                    </label>
+
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <span><img src="/svg/star.svg" alt="" /></span>
+                      <p>3.5 & up (2.6K)</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
+                  Video Duration
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    4.5 & up (5.8K)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    3-5 Hours (4.1K)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    6-12 Hours (3.8K)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    12+ Hours (1K)
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                  Categories
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseThree"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    Design (3.2K)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+
+                    Programming (5.8K)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    Business & Marketing (4.5)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    Finance (2.6)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    Music & Film (4.8K)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    Photo & Video (5.8K)
+                  </label>
+                  <label>
+                    <input type="checkbox" name="rating" />
+                    Writing (2.6k)
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOnee"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  Software
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOnee"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="starts">
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <span><img src="/svg/star.svg" alt="" /></span>
+                      <p>4.5 & up (5.8K)</p>
+                    </label>
+
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <span><img src="/svg/star.svg" alt="" /></span>
+                      <p>4.0 & up (4.1K)</p>
+                    </label>
+
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <span><img src="/svg/star.svg" alt="" /></span>
+                      <p>3.5 & up (2.6K)</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOneee"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  Level
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOneee"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="starts">
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <p>All Levels</p>
+                    </label>
+
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <p>Beginner (5.8k)</p>
+                    </label>
+
+
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <p>Intermediate (4.1k)</p>
+                    </label>
+                    <label class="star_cont">
+                      <input type="radio" name="rating" />
+                      <p>Advanced (2.6)</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOneeee"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  Language
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOneeee"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <div class="languages">
+                <label class="star_cont">
+                  <input type="radio" name="language" value="uzb" />
+                  <p>Uzb</p>
+                </label>
+
+                <label class="star_cont">
+                  <input type="radio" name="language" value="rus" />
+                  <p>Rus</p>
+                </label>
+
+                <label class="star_cont">
+                  <input type="radio" name="language" value="english" />
+                  <p>English</p>
+                </label>
+
+                <label class="star_cont">
+                  <input type="radio" name="language" value="all" checked />
+                  <p>All</p>
+                </label>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search_cards">
+          <div class="search_cards_title">
+            <p>Showing 2,312 results of <span>UI Design</span></p>
+            <div>
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Most Popular
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item active" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="coursesContainer" class="search_cards_all">
+ </div>
+          <div class="next">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">98</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+        </div>
+        <div>
+      <div class="container">
+        <div class="strelka">
+          <button class="strelka1"><img src="./img/strelka.svg" alt=""></button>
+          <div>
+            <button class="sonlar">1</button>
+          <button class="sonlar">2</button>
+          <button class="sonlar">3</button>
+          <button class="sonlar">4</button>
+          <button class="sonlar">5</button>
+          <button class="sonlar">...</button>
+          <button class="sonlar">98</button>
+          </div>
+          <button class="strelka1"><img src="./img/strelka2.svg" alt=""></button>
+        </div>
+      </div>
+     </div>
+    </div>
+ </div>
+      </div>
+     </section>
+
+     
+     <!-- end -->
+
+     <div class="container slekt">
+     <div class="box">
+        <div class="box-text">
+          <h2>Join Klevr now to get 35% off</h2>
+          <p>With our responsive themes and mobile and desktop apps, <br>
+          enjoy a seamless experience on any device so will your blog the best visitors</p>
+          <button>Join Klevr</button>
+        </div>
+        <div>
+          <img src="img/gul.png" alt="">
+        </div>
+      </div>
+    </div>
+    </div>
+ <!--footer -->
+    <footer>
+  <div class="container">
+    <div class="footer-ota">
+      <div><img src="./img/logo2.svg" alt=""></div>
+      <div class="footer-left">
+      <div class="hover-mian">
+        <a class="hover-link" href="./index.html">Web Programming</a>
+        <a class="hover-link" href="./index.html">Mobile Programming</a>
+        <a class="hover-link" href="./index.html">Java Beginner</a>
+        <a class="hover-link" href="./index.html">PHP Beginner</a>
+      </div>
+      <div class="hover-mian">
+        <a class="hover-link" href="./index.html">Adobe Illustrator</a>
+        <a class="hover-link" href="./index.html">MPhotoshop</a>
+        <a class="hover-link" href="./index.html">Design Logo</a>
+      </div>
+      <div class="hover-mian">
+        <a class="hover-link" href="./index.html">Writing Course</a>
+        <a class="hover-link" href="./index.html">Photography</a>
+        <a class="hover-link" href="./index.html">Video Making</a>
+      </div>
+      </div>
+    </div>
+    <div class="hr-flex"></div>
+    <div class="reseved">
+      <a href="./index.html">Copyright © MyCourse.io 2024. All Rights Reserved</a>
+      <div class="img-3">
+        <a href=""><img src="./img/tiwiter.svg" alt=""></a>
+        <a href=""><img src="./img/instagram.svg" alt=""></a>
+        <a href=""><img src="./img/Facebook.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
