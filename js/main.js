@@ -20,90 +20,172 @@ document.addEventListener("click", function (event) {
 
 // splide
 
-const links = document.querySelectorAll('.category-link');
-const products = document.querySelectorAll('.product');
+const links = document.querySelectorAll(".category-link");
+const products = document.querySelectorAll(".product");
 
-links.forEach(link => {
-  link.addEventListener('click', function(e) {
+links.forEach((link) => {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
-    links.forEach(l => l.classList.remove('active'));
-    this.classList.add('active');
+    links.forEach((l) => l.classList.remove("active"));
+    this.classList.add("active");
 
     const category = this.dataset.category;
 
-    products.forEach(product => {
-      if (category === 'all' || product.dataset.category === category) {
-        product.style.display = 'block';
+    products.forEach((product) => {
+      if (category === "all" || product.dataset.category === category) {
+        product.style.display = "block";
       } else {
-        product.style.display = 'none';
+        product.style.display = "none";
       }
     });
   });
 });
 
+//
 
-// 
+function saveProfile() {
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const headline = document.getElementById("headline").value;
+  const language = document.getElementById("language").value;
 
- function saveProfile() {
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const headline = document.getElementById('headline').value;
-            const language = document.getElementById('language').value;
+  console.log("Saving profile:", {
+    firstName,
+    lastName,
+    headline,
+    language,
+  });
 
-            console.log('Saving profile:', {
-                firstName,
-                lastName,
-                headline,
-                language
-            });
+  const message = document.getElementById("successMessage");
+  message.classList.add("show");
 
-            const message = document.getElementById('successMessage');
-            message.classList.add('show');
+  setTimeout(() => {
+    message.classList.remove("show");
+  }, 3000);
+}
 
-            setTimeout(() => {
-                message.classList.remove('show');
-            }, 3000);
-        }
+document.querySelectorAll(".tab").forEach((tab) => {
+  tab.addEventListener("click", function () {
+    document
+      .querySelectorAll(".tab")
+      .forEach((t) => t.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
 
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
+document.querySelectorAll("input, select").forEach((element) => {
+  element.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      saveProfile();
+    }
+  });
+});
 
-        document.querySelectorAll('input, select').forEach(element => {
-            element.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    saveProfile();
-                }
-            });
-        });
-
-
-
-
-
-        
 const courses = [
-  { id: 1, img: "./img/desigin.png", title: "Adobe Illustrator Scretch Course", rating: 5.8, price: "$24.92", language: "english" },
-  { id: 2, img: "img/Buseniss.png ", title: "Bootcamp Vue.js Web Framework", rating: 4.1, price: "$21.92", language: "uzb" },
-  { id: 3, img: "/img/mak.png", title: "Design Fundamentals", rating: 2.6, price: "$28.92", language: "rus" },
-  { id: 4, img: "/img/uzunsoch.png", title: "Adobe Illustrator Scretch Course", rating: 2.6, price: "$31.92", language: "english" },
-  { id: 5, img: "/img/wablyu.svg", title: "Bootcamp Vue.js Web Framework", rating: 4.1, price: "$44.92", language: "uzb" },
-  { id: 6, img: "img/devoloper.png", title: "Design Fundamentals", rating: 5.8, price: "$28.92", language: "rus" },
-  { id: 7, img: "/img/ofes.svg", title: "Bootcamp Vue.js Web Framework", rating: 2.6, price: "$33.92", language: "english" },
-  { id: 8, img: "/img/osign.svg", title: "Bootcamp Vue.js Web Framework", rating: 4.1, price: "$41.92", language: "uzb" },
-  { id: 9, img: "/img/women.png", title: "Design Fundamentals", rating: 5.8, price: "$17.92", language: "rus" },
-  { id: 6, img: "img/devoloper.png", title: "Design Fundamentals", rating: 5.8, price: "$28.92", language: "rus" },
-  { id: 7, img: "/img/ofes.svg", title: "Bootcamp Vue.js Web Framework", rating: 2.6, price: "$33.92", language: "english" },
-  { id: 8, img: "/img/osign.svg", title: "Bootcamp Vue.js Web Framework", rating: 4.1, price: "$41.92", language: "uzb" },
+  {
+    id: 1,
+    img: "./img/desigin.png",
+    title: "Adobe Illustrator Scretch Course",
+    rating: 5.8,
+    price: "$24.92",
+    language: "english",
+  },
+  {
+    id: 2,
+    img: "img/Buseniss.png ",
+    title: "Bootcamp Vue.js Web Framework",
+    rating: 4.1,
+    price: "$21.92",
+    language: "uzb",
+  },
+  {
+    id: 3,
+    img: "/img/mak.png",
+    title: "Design Fundamentals",
+    rating: 2.6,
+    price: "$28.92",
+    language: "rus",
+  },
+  {
+    id: 4,
+    img: "/img/uzunsoch.png",
+    title: "Adobe Illustrator Scretch Course",
+    rating: 2.6,
+    price: "$31.92",
+    language: "english",
+  },
+  {
+    id: 5,
+    img: "/img/wablyu.svg",
+    title: "Bootcamp Vue.js Web Framework",
+    rating: 4.1,
+    price: "$44.92",
+    language: "uzb",
+  },
+  {
+    id: 6,
+    img: "img/devoloper.png",
+    title: "Design Fundamentals",
+    rating: 5.8,
+    price: "$28.92",
+    language: "rus",
+  },
+  {
+    id: 7,
+    img: "/img/ofes.svg",
+    title: "Bootcamp Vue.js Web Framework",
+    rating: 2.6,
+    price: "$33.92",
+    language: "english",
+  },
+  {
+    id: 8,
+    img: "/img/osign.svg",
+    title: "Bootcamp Vue.js Web Framework",
+    rating: 4.1,
+    price: "$41.92",
+    language: "uzb",
+  },
+  {
+    id: 9,
+    img: "/img/women.png",
+    title: "Design Fundamentals",
+    rating: 5.8,
+    price: "$17.92",
+    language: "rus",
+  },
+  {
+    id: 6,
+    img: "img/devoloper.png",
+    title: "Design Fundamentals",
+    rating: 5.8,
+    price: "$28.92",
+    language: "rus",
+  },
+  {
+    id: 7,
+    img: "/img/ofes.svg",
+    title: "Bootcamp Vue.js Web Framework",
+    rating: 2.6,
+    price: "$33.92",
+    language: "english",
+  },
+  {
+    id: 8,
+    img: "/img/osign.svg",
+    title: "Bootcamp Vue.js Web Framework",
+    rating: 4.1,
+    price: "$41.92",
+    language: "uzb",
+  },
 ];
 
 const container = document.getElementById("coursesContainer");
 
 function showCourses(list) {
-  container.innerHTML = list.map(c => `
+  container.innerHTML = list
+    .map(
+      (c) => `
            
  <div class="cardd" data-language="${c.language}" data-rating="${c.rating}">
               <div class="cars-img">
@@ -174,7 +256,9 @@ function showCourses(list) {
                 <p>${c.language.toUpperCase()}</p>
               </div>
             </div>
-  `).join("");
+  `
+    )
+    .join("");
 }
 
 showCourses(courses);
@@ -182,9 +266,9 @@ showCourses(courses);
 let activeRating = 0;
 let activeLanguage = "all";
 
-const allInputs = document.querySelectorAll('.accordion-body input');
+const allInputs = document.querySelectorAll(".accordion-body input");
 
-allInputs.forEach(input => {
+allInputs.forEach((input) => {
   input.addEventListener("change", () => {
     const type = input.getAttribute("type");
     const langValue = input.value;
@@ -211,37 +295,28 @@ function applyFilters() {
   let filtered = [...courses];
 
   if (activeRating > 0) {
-    filtered = filtered.filter(c => c.rating >= activeRating);
+    filtered = filtered.filter((c) => c.rating >= activeRating);
   }
 
   if (activeLanguage !== "all") {
-    filtered = filtered.filter(c => c.language === activeLanguage);
+    filtered = filtered.filter((c) => c.language === activeLanguage);
   }
 
   showCourses(filtered);
 }
 
-        
-
-
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function(e) {
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(this.getAttribute("href"));
     if (target) {
       target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: "smooth",
+        block: "start",
       });
     }
   });
 });
-
-
-
-
-
 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
@@ -256,7 +331,53 @@ window.addEventListener("scroll", () => {
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth" 
+    behavior: "smooth",
   });
 });
 
+document.getElementById("userForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const fields = ["firstName", "lastName", "headline", "language", "link"];
+  let isValid = true;
+
+  fields.forEach((id) => {
+    const input = document.getElementById(id);
+    const error = document.getElementById(id + "Error");
+    const value = input.value.trim();
+
+    if (id === "link") {
+      const urlPattern = /^(https?:\/\/)?([\w\-]+\.)+[\w\-]+(\/[\w\-]*)*$/;
+      if (!urlPattern.test(value)) {
+        input.classList.add("error");
+        input.classList.remove("success");
+        error.style.display = "block";
+        isValid = false;
+        return;
+      }
+    }
+
+    if (value === "") {
+      input.classList.add("error");
+      input.classList.remove("success");
+      error.style.display = "block";
+      isValid = false;
+    } else {
+      input.classList.remove("error");
+      input.classList.add("success");
+      error.style.display = "none";
+    }
+  });
+
+  if (isValid) {
+    alert("✅ Ma'lumotlar muvaffaqiyatli yuborildi!");
+  }
+});
+
+const form = document.getElementById("userForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  console.log("Form yuborildi — lekin sahifa yangilanmadi!");
+});

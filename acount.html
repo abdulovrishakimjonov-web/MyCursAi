@@ -164,30 +164,34 @@
             <div class="tab">Notifications</div>
             <div class="tab">Privacy</div>
         </div>
-
+ 
+        <form id="userForm">
         <div class="profile-section">
             <div class="avatar-container">
                 <div class="avatar"><img src="./img/Square.svg" alt=""></div>
                 <div class="edit-icon"></div>
             </div>
-
+             
             <div class="form-group">
-                <label>First Name</label>
+                <label for="firstName">First Name</label>
                 <input type="text" id="firstName" value="Jonathan">
+                <p class="error-text" id="firstNameError">Please enter your first name</p>
             </div>
 
             <div class="form-group">
-                <label>Last Name</label>
+                <label for="lastName">Last Name</label>
                 <input type="text" id="lastName" value="Doe">
+                <p class="error-text" id="lastNameError">Please enter your last name</p>
             </div>
 
             <div class="form-group">
-                <label>Headline</label>
+                <label for="headline">Headline</label>
                 <input type="text" id="headline" placeholder="Add a headline">
+                 <p class="error-text" id="headlineError">Please enter your headline</p>
             </div>
 
             <div class="form-group">
-                <label>Language</label>
+                <label for="language">Language</label>
                 <select id="language">
                     <option value="en" selected>English</option>
                     <option value="uz">O'zbek</option>
@@ -195,21 +199,23 @@
                     <option value="es">Español</option>
                     <option value="fr">Français</option>
                 </select>
+                <p class="error-text" id="languageError">Please enter your language</p>
             </div>
 
             <div class="form-group">
-                <label>Link</label>
+                <label for="link">link</label>
                 <input type="text" id="link" placeholder="www.kitani.io">
+                <p class="error-text" id="linkError">Please enter a valid link (https://...)</p>
             </div>
 
-            <button class="save-btn" onclick="saveProfile()">Save</button>
+            <button class="save-btn" type="submit" id="submitBtn" onclick="saveProfile()">Save</button>
         </div>
+        </form>
     </div>
 
     <div class="success-message" id="successMessage">
         Profile saved successfully! ✓
     </div>
-
 
 
     <!--footer -->
